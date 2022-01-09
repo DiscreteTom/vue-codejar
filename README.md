@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-npm install DiscreteTom/vue-codejar
+npm install vue-codejar
 ```
 
 ## Usage
