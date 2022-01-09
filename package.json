@@ -1,0 +1,19 @@
+{
+  "name": "vue-codejar",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "Vue",
+    "code editor",
+    "CodeJar",
+    "lightweight"
+  ],
+  "author": "DiscreteTom discrete_tom@outlook.com",
+  "license": "MIT",
+  "dependencies": {
+    "codejar": "^3.5.0",
+    "prismjs": "^1.26.0"
+  }
+}
