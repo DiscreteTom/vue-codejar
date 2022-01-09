@@ -10,6 +10,7 @@
 
 <script>
 import { CodeJar } from "codejar";
+import { withLineNumbers } from "codejar/linenumbers.js";
 
 export default {
   data() {
@@ -27,6 +28,7 @@ export default {
       type: Function,
       default: () => {},
     },
+    lineNumbers: Boolean,
   },
   methods: {
     setReadonly(val) {
@@ -37,7 +39,10 @@ export default {
     },
   },
   mounted() {
-    this.jar = CodeJar(this.$refs.editor, this.highlighter);
+    this.jar = CodeJar(
+      this.$refs.editor,
+      this.lineNumbers ? withLineNumbers(this.highlighter) : this.highlighter
+    );
     if (this.$refs.editor.contentEditable !== "plaintext-only")
       this.isLegacy = true;
 

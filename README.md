@@ -42,6 +42,7 @@ export default {
   - `code-style`
   - `lang`: will add a class `language-${lang}` to the code editor, which is useful when you need to highlight your code.
   - `highlighter`: CodeJar highlighter function, see https://github.com/antonmedv/codejar .
+  - `line-numbers`: show line number.
 - Events
   - `input`: emit the code content.
 
