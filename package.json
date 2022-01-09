@@ -13,7 +13,6 @@
   "author": "DiscreteTom discrete_tom@outlook.com",
   "license": "MIT",
   "dependencies": {
-    "codejar": "^3.5.0",
-    "prismjs": "^1.26.0"
+    "codejar": "^3.5.0"
   }
 }
