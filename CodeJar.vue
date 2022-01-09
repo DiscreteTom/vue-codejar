@@ -37,18 +37,21 @@ export default {
         val ? "false" : this.isLegacy ? "true" : "plaintext-only"
       );
     },
+    refresh() {
+      this.jar = CodeJar(
+        this.$refs.editor,
+        this.lineNumbers ? withLineNumbers(this.highlighter) : this.highlighter
+      );
+      if (this.$refs.editor.contentEditable !== "plaintext-only")
+        this.isLegacy = true;
+
+      this.jar.onUpdate((code) => this.$emit("input", code));
+      this.setReadonly(this.readonly);
+      this.jar.updateCode(this.value);
+    },
   },
   mounted() {
-    this.jar = CodeJar(
-      this.$refs.editor,
-      this.lineNumbers ? withLineNumbers(this.highlighter) : this.highlighter
-    );
-    if (this.$refs.editor.contentEditable !== "plaintext-only")
-      this.isLegacy = true;
-
-    this.jar.onUpdate((code) => this.$emit("input", code));
-    this.setReadonly(this.readonly);
-    this.jar.updateCode(this.value);
+    this.refresh();
   },
   watch: {
     value(val) {
@@ -58,6 +61,12 @@ export default {
     },
     readonly(val) {
       this.setReadonly(val);
+    },
+    lineNumbers() {
+      this.refresh();
+    },
+    highlighter() {
+      this.refresh();
     },
   },
   destroyed() {
