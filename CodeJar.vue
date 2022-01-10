@@ -68,6 +68,12 @@ export default {
     highlighter() {
       this.refresh();
     },
+    lang() {
+      // re-highlight code
+      this.$nextTick(() => {
+        this.jar.updateCode(this.jar.toString());
+      });
+    },
   },
   destroyed() {
     this.jar.destroy();
