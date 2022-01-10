@@ -1,6 +1,9 @@
-# vue-codejar
+# vue-codejar🍯
 
-> [CodeJar](https://github.com/antonmedv/codejar) for Vue.
+[![npm](https://img.shields.io/npm/v/vue-codejar?color=brightgreen)](https://www.npmjs.com/package/vue-codejar)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/vue-codejar?label=size)](https://bundlephobia.com/result?p=vue-codejar)
+
+[CodeJar🍯](https://github.com/antonmedv/codejar) for Vue.
 
 ## Installation
 
@@ -48,6 +51,8 @@ export default {
 
 > `v-model` is supported, but is not recommended since it will resulting in poor performance.
 
+## [CHANGELOG](https://github.com/DiscreteTom/vue-codejar/blob/main/CHANGELOG.md)
+
 ## License
 
-MIT
+[MIT](https://github.com/DiscreteTom/vue-codejar/blob/main/LICENSE)
